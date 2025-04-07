@@ -7,6 +7,9 @@ table {
     margin-left: auto;
     margin-right: auto;
 }
+th, td {
+        padding-right: 15px;
+}
 </style>
     <title>Todo List</title>
 </head>
@@ -15,13 +18,15 @@ table {
     <h2>Todo List</h2>
     <table>
         <tr>
-            <th>Number</th>
+            <!--<th>Number</th>-->
+            <th>Completed?</th>
             <th>Task</th>
             <th>Delete</th>
         </tr>
         <% data.forEach(element => { %>
         <tr>
-            <td><%= element.todoId %></td>
+            <!--<td><%= element.todoId %></td>-->
+            <td><input type="checkbox"></td>
             <td><%= element.todoTask %></td>
 			<td>
 				<form action="/delete" method="POST">
